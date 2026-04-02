@@ -1,0 +1,105 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.success-container {
+  height: 100vh;
+  background: #0a0a0a;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Inter', sans-serif;
+}
+
+.success-card {
+  background: #111111;
+  border: 1px solid #232323;
+  border-radius: 20px;
+  padding: 40px;
+  width: 420px;
+  text-align: center;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6);
+}
+
+.success-icon {
+  width: 70px;
+  height: 70px;
+  background: #f5b800;
+  color: #000;
+  border-radius: 50%;
+  font-size: 36px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 20px;
+}
+
+.success-title {
+  font-size: 24px;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 10px;
+}
+
+.success-subtitle {
+  font-size: 14px;
+  color: #aaaaaa;
+  margin-bottom: 25px;
+}
+
+.success-info {
+  background: #0c0c0c;
+  border: 1px solid #2a2a2a;
+  border-radius: 12px;
+  padding: 15px;
+  margin-bottom: 25px;
+}
+
+.success-info p {
+  font-size: 13px;
+  color: #cccccc;
+  margin-bottom: 6px;
+}
+
+.success-info span {
+  color: #f5b800;
+  font-weight: 600;
+}
+
+.success-actions {
+  display: flex;
+  gap: 10px;
+}
+
+.btn {
+  flex: 1;
+  padding: 12px;
+  border-radius: 25px;
+  font-weight: 600;
+  cursor: pointer;
+  border: none;
+  transition: 0.2s;
+}
+
+.btn.primary {
+  background: #f5b800;
+  color: #000;
+}
+
+.btn.primary:hover {
+  background: #ffcc33;
+}
+
+.btn.secondary {
+  background: transparent;
+  border: 1px solid #f5b800;
+  color: #f5b800;
+}
+
+.btn.secondary:hover {
+  background: #f5b800;
+  color: #000;
+}

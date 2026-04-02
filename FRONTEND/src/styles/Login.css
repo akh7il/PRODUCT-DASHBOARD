@@ -1,0 +1,195 @@
+.login-container {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #000;
+  overscroll-behavior-y: none;
+}
+
+.login-card {
+  width: 400px;
+  min-height: 520px;
+  background: #111;
+  border-radius: 18px;
+  padding: 35px 30px;
+  box-shadow: 0 20px 40px rgba(255, 255, 0, 0.15);
+  border: 1px solid #222;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.login-container-brand {
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.brand-name {
+  font-family: "Carter One", system-ui;
+  font-weight: 900;
+  font-style: normal;
+  font-size: 1.8rem;
+  color: #FFD700;
+  text-transform: uppercase;
+}
+
+.login-container-head {
+  text-align: center;
+  margin-bottom: 20px;
+  font-family: "Overlock SC", sans-serif;
+  font-weight: 700;
+  font-style: .8rem;
+  color: #fff;
+}
+
+.login-container-form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.login-container-form-input {
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #333;
+  outline: none;
+  font-size: 14px;
+  background: #000;
+  color: #fff;
+  width: 100%;
+  box-sizing: border-box;
+  font-family: "Winky Rough", sans-serif;
+}
+
+.login-container-form-input::placeholder {
+  font-family: "Winky Rough", sans-serif;
+  color: #aaa;
+}
+
+.login-container-form-input:focus {
+  border-color: #FFD700;
+}
+
+.password-wrapper {
+  position: relative;
+  width: 100%;
+}
+
+.toggle-password {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  color: #FFD700;
+  font-family: "Winky Rough", sans-serif;
+  font-size: .8rem;
+}
+
+.login-btn {
+  margin-top: 10px;
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  background: #FFD700;
+  color: #000;
+  font-weight: 500;
+  cursor: pointer;
+  transition: 0.2s;
+  font-family: "Winky Rough", sans-serif;
+  font-size: 1rem;
+}
+
+.login-btn:hover {
+  background: #e6c200;
+}
+
+.other-login-method {
+  display: block;
+  text-align: center;
+  font-family: "Winky Rough", sans-serif;
+  font-size: 1rem;
+  margin: 15px 0 10px;
+  font-size: 13px;
+  color: #aaa;
+}
+
+.other-login-options {
+  display: flex;
+  justify-content: center;
+}
+
+.google-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  width: 100%;
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid #333;
+  background: #000;
+  color: #fff;
+  font-weight: 500;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.google-btn:hover {
+  border-color: #FFD700;
+  background: #111;
+}
+
+.google-icon {
+  width: 18px;
+  height: 18px;
+}
+
+.social-btn {
+  flex: 1;
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #333;
+  background: #000;
+  color: #fff;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.social-btn:hover {
+  border-color: #FFD700;
+}
+
+.login-container-footer {
+  display: block;
+  text-align: center;
+  margin-top: 15px;
+  font-family: "Winky Rough", sans-serif;
+  font-size: 1rem;
+  color: #aaa;
+}
+
+.switch-mode {
+  color: #FFD700;
+  font-weight: 600;
+  cursor: pointer;
+  margin-left: 5px;
+}
+
+.error-text {
+  color: #ff4d4d;
+  font-size: 12px;
+  margin-top: -6px;
+  margin-bottom: -6px;
+  font-family: "Winky Rough", sans-serif;
+  font-size: .8rem;
+  font-weight: 500;
+  font-style: normal;
+}
+
+@media (max-width: 480px) {
+  .login-card {
+    width: 90%;
+  }
+}

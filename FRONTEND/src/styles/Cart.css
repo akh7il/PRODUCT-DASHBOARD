@@ -1,0 +1,402 @@
+.cart-container {
+    width: 100%;
+    min-height: 100vh;
+    background-color: #262626;
+    display: flex;
+    flex-direction: row;
+}
+
+.cart-container-head {
+    width: 100%;
+    height: auto;
+    color: #FFF6F6;
+    text-transform: uppercase;
+    font-family: "JetBrains Mono", monospace;
+    font-size: 2.5rem;
+    font-weight: 900;
+    font-style: normal;
+    padding-left: 35px;
+    margin-top: 20px;
+}
+
+.cart-container-left {
+    width: 60%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow-x: hidden;
+    overflow-y: auto;
+    scrollbar-width: none;
+    gap: 40px;
+}
+
+.cart-container-right {
+    flex: 1;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.cart-box {
+    width: 90%;
+    min-height: 180px;
+    max-height: 180px;
+    background-color: black;
+    border: 0;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: 0 20px;
+    gap: 10%;
+    overflow: hidden;
+}
+
+.cart-image {
+    width: 25%;
+    height: 80%;
+    border: 0;
+    border-radius: 5px;
+    background-color: #fff;
+    overflow: hidden;
+}
+
+.cart-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.cart-details {
+    flex: 1;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: start;
+    color: #FFD700;
+    font-family: "Overlock SC", sans-serif;
+    font-size: 1.1rem;
+    font-weight: 800;
+    font-style: normal;
+    text-transform: uppercase;
+}
+
+.number {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.cart-btns {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: auto;
+    gap: 20px;
+}
+
+.button {
+    border: 0;
+    padding: 7px 15px;
+    border-radius: 5px;
+    font-family: "Overlock SC", sans-serif;
+    font-size: .9rem;
+    font-weight: 900;
+    font-style: normal;
+    text-transform: uppercase;
+    cursor: pointer;
+    min-height: 35px;
+}
+
+.right {
+    display: none;
+}
+
+.button path {
+    fill: #FFF6F6;
+}
+
+.delete {
+    background-color: #DB1A1A;
+}
+
+.delete:hover {
+    background-color: #ff0000;
+}
+
+.check-out {
+    background-color: #355872;
+    color: #FFF6F6;
+}
+
+.check-out:hover {
+    background-color: #1c425f;
+}
+
+.summery-card {
+    min-width: 300px;
+    min-height: 400px;
+    background-color: #FFD700;
+    border: 0;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: start;
+    padding: 20px 20px;
+}
+
+.summery-card-head {
+    width: 100%;
+    color: #262626;
+    font-family: "Overlock SC", sans-serif;
+    font-size: 1.5rem;
+    font-weight: 900;
+    font-style: normal;
+    text-transform: uppercase;
+    border-bottom: 2px solid #262626;
+}
+
+.summery-card-details {
+    flex: 1;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5%;
+}
+
+.summery-card-details p {
+    color: #262626;
+}
+
+.details {
+    font-family: "Overlock SC", sans-serif;
+    font-weight: 900;
+    font-size: 1.5rem;
+}
+
+.summery-card-details button {
+    padding: 15px 20px;
+}
+
+.underline {
+    border-bottom: 2px solid #262626;
+}
+
+@media screen and (max-width: 380px) {
+    .cart-box {
+        flex-direction: column !important;
+        align-items: center !important;
+        min-width: none !important;
+        width: 95% !important;
+    }
+
+    .cart-image {
+        width: 100px !important;
+        height: 100px !important;
+    }
+
+    .cart-details {
+        align-items: start !important;
+        text-align: start !important;
+        min-width: auto !important;
+        width: 100% !important;
+    }
+
+    .cart-btns {
+        justify-content: start !important;
+    }
+
+    .item-count {
+        font-size: .8rem;
+    }
+}
+
+@media screen and (min-width: 481px) and (max-width: 768px) {
+    .cart-container-head {
+        font-size: 2.5rem !important;
+    }
+
+    .cart-box {
+        max-width: 500px;
+        padding: 20px !important;
+        gap: 20px !important;
+    }
+
+    .cart-image {
+        width: 120px !important;
+        height: 120px !important;
+        min-width: 120px !important;
+    }
+
+    .cart-details {
+        min-width: 200px !important;
+        gap: 10px !important;
+    }
+
+    .button {
+        padding: 8px 16px !important;
+        font-size: 0.8rem !important;
+    }
+
+    .summery-card {
+        max-width: 500px !important;
+        margin: 0 auto !important;
+        text-align: center;
+        gap: 20px;
+    }
+
+    .cart-container-right {
+        margin-top: 20px;
+    }
+
+    .summery-card-head {
+        text-align: center;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .left {
+        display: none;
+    }
+
+    .cart-container {
+        flex-direction: column !important;
+    }
+
+    .cart-container-left {
+        width: 100% !important;
+        height: auto !important;
+        min-height: auto !important;
+        gap: 20px !important;
+        padding: 0 10px 20px 10px !important;
+        overflow-x: hidden !important;
+        order: 2 !important;
+    }
+
+    .cart-container-right {
+        width: 100% !important;
+        height: max-content !important;
+        max-height: 300px !important;
+        padding: 20px !important;
+        order: 1 !important;
+        justify-content: start;
+    }
+
+    .cart-container-head {
+        font-size: 1.5rem !important;
+        padding-left: 0 !important;
+        text-align: center !important;
+        margin-top: 15px !important;
+        margin-bottom: 10px !important;
+    }
+
+    .cart-box {
+        width: 100% !important;
+        min-height: auto !important;
+        flex-direction: row !important;
+        padding: 15px !important;
+        gap: 15px !important;
+        flex-wrap: wrap !important;
+    }
+
+    .cart-image {
+        width: 100px !important;
+        height: 100px !important;
+        min-width: 100px !important;
+    }
+
+    .cart-details {
+        flex: 1 !important;
+        min-width: 180px !important;
+        align-items: flex-start !important;
+        text-align: left !important;
+        gap: 8px !important;
+    }
+
+    .cart-btns {
+        justify-content: flex-start !important;
+        flex-wrap: wrap !important;
+        gap: 10px !important;
+    }
+
+    .button {
+        padding: 6px 12px !important;
+        font-size: 0.7rem !important;
+    }
+
+    .summery-card {
+        min-width: auto !important;
+        width: 100% !important;
+        min-height: auto !important;
+        padding: 15px !important;
+    }
+
+    .summery-card-head {
+        font-size: 1.2rem !important;
+    }
+
+    .details {
+        font-size: 1rem !important;
+    }
+
+    .summery-card-details button {
+        padding: 10px 16px !important;
+        font-size: 0.8rem !important;
+    }
+}
+
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+    .right {
+        display: none;
+    }
+
+    .cart-container-left {
+        width: 55% !important;
+        gap: 30px !important;
+    }
+
+    .cart-container-right {
+        width: 45% !important;
+        justify-content: start;
+        margin-top: 120px;
+    }
+
+    .cart-container-head {
+        font-size: 3rem !important;
+        padding-left: 20px !important;
+    }
+
+    .cart-box {
+        width: 95% !important;
+        gap: 5% !important;
+    }
+
+    .cart-image {
+        width: 30% !important;
+        height: auto !important;
+    }
+
+    .cart-details {
+        font-size: 0.9rem !important;
+    }
+
+    .button {
+        padding: 6px 12px !important;
+        font-size: 0.75rem !important;
+    }
+
+    .summery-card {
+        min-width: 260px !important;
+        min-height: 360px !important;
+    }
+
+    .details {
+        font-size: 1.1rem !important;
+    }
+}
