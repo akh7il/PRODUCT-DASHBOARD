@@ -5,13 +5,11 @@ from django.urls import path, include
 from accounts.views import RegisterView, CustomTokenView, GoogleLoginView
 from rest_framework.routers import DefaultRouter
 from products.views import ProductViewSet, CartViewSet, CartItemViewSet
-from products.views import OrderViewSet
 
 router = DefaultRouter()
 router.register('products', ProductViewSet)
 router.register('cart', CartViewSet, basename='cart')
 router.register('cart-items', CartItemViewSet, basename='cart-items')
-router.register('orders', OrderViewSet, basename='orders')
 
 urlpatterns = [
     path('admin/', admin.site.urls),

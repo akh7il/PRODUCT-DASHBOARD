@@ -3,8 +3,8 @@ from rest_framework.response import Response
 from rest_framework.decorators import action
 from rest_framework.permissions import IsAuthenticated
 from django.shortcuts import get_object_or_404
-from .models import Product, Cart, CartItem, Order
-from .serializers import ProductSerializer, CartSerializer, CartItemSerializer, OrderSerializer
+from .models import Product, Cart, CartItem
+from .serializers import ProductSerializer, CartSerializer, CartItemSerializer
 
 class ProductViewSet(viewsets.ModelViewSet):
     queryset = Product.objects.all()
@@ -85,16 +85,3 @@ class CartItemViewSet(viewsets.ModelViewSet):
 
     def get_queryset(self):
         return CartItem.objects.filter(cart__user=self.request.user)
-
-class OrderViewSet(viewsets.ModelViewSet):
-    queryset = Order.objects.all()
-    serializer_class = OrderSerializer
-    permission_classes = [IsAuthenticated]
-
-    def get_queryset(self):
-        return Order.objects.filter(user=self.request.user)
-
-    def perform_create(self, serializer):
-        cart_id = self.request.data.get('cart_id')
-        cart = Cart.objects.get(id=cart_id, user=self.request.user)
-        serializer.save(user=self.request.user, cart=cart)
